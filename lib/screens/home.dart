@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
           title: Text("BMI Calculator",
               style: TextStyle(
                 fontWeight: FontWeight.w300,
-                fontSize: 20,
+                fontSize: 35,
                 color: Theme.of(context).accentColor,
               ))),
       body: Container(
@@ -45,17 +45,17 @@ class _HomeState extends State<Home> {
                     ),
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        labelText: "Height",
+                        labelText: "Height/m",
                         border: InputBorder.none,
                         labelStyle: TextStyle(
                           color: Colors.white.withOpacity(0.8),
-                          fontSize: 32,
+                          fontSize: 20,
                           fontWeight: FontWeight.w300,
                         )),
                   ),
                 ),
                 Container(
-                  width: 140,
+                  width: 110,
                   child: TextField(
                     controller: _weight,
                     style: TextStyle(
@@ -65,11 +65,11 @@ class _HomeState extends State<Home> {
                     ),
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        labelText: "Weight",
+                        labelText: "Weight/kg",
                         border: InputBorder.none,
                         labelStyle: TextStyle(
                           color: Colors.white.withOpacity(0.8),
-                          fontSize: 32,
+                          fontSize: 20,
                           fontWeight: FontWeight.w300,
                         )),
                   ),
@@ -96,15 +96,15 @@ class _HomeState extends State<Home> {
               child: Container(
                 child: Text("Calculate",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 35,
                       fontWeight: FontWeight.w400,
                       color: Theme.of(context).accentColor,
                     )),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 150),
             Container(
-              height: 120,
+              height: 150,
               child: Visibility(
                 visible: textResult.isNotEmpty,
                 child: Column(
@@ -124,15 +124,6 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            RightBar(50),
-            SizedBox(height: 7),
-            RightBar(70),
-            SizedBox(height: 7),
-            RightBar(40),
-            SizedBox(height: 7),
-            LeftBar(50),
-            SizedBox(height: 7),
-            LeftBar(70),
           ],
         ),
       ),
